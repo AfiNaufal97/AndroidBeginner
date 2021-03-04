@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mt_version"
+        android:title="Version"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mt_about"
+        android:title="About ME"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/mt_exit"
+        android:title="Exit"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/mt_favorit"
+        android:icon="@drawable/ic_favorite"
+        app:showAsAction="always"
+        android:title="Favorite"/>
+
+    <item
+        android:id="@+id/mt_add_person"
+        android:icon="@drawable/ic_person_add"
+        app:showAsAction="always"
+        android:title="Add Person"/>
+
+</menu>

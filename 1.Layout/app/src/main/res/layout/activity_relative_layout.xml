@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--wajib menyertakan id untuk tiap view, width, dan height-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayout">
+
+    <TextView
+        android:id="@+id/tv_nama_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Nama : "/>
+
+<!--    ini berada relatif pada view di sekitanya , misal pada view dengan id tv_nama_rl-->
+    <TextView
+        android:id="@+id/tv_value_nama_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_nama_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Afi "/>
+
+</RelativeLayout>

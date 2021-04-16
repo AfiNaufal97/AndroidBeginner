@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btn_linear"
+        android:title="Linear"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/btn_grid"
+        android:title="Grid"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="never"/>
+
+
+    <item
+        android:id="@+id/btn_add_person"
+        android:title="Add Person"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="always"/>
+
+</menu>

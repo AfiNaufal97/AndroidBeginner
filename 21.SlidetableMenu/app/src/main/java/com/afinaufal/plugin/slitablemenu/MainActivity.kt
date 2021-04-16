@@ -12,40 +12,39 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var toggle: ActionBarDrawerToggle
+    lateinit var isiDrawer:ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val draw:DrawerLayout = findViewById(R.id.draw_ly)
-        val sideMenu:NavigationView = findViewById(R.id.nv_side)
+        val drawer:DrawerLayout = findViewById(R.id.draw_ly)
+        val valueMenu:NavigationView = findViewById(R.id.nv_side)
 
+        // jika tombol menu samping di tekan akan muncul
+        isiDrawer = ActionBarDrawerToggle(this, drawer,R.string.open, R.string.close)
 
-        toggle = ActionBarDrawerToggle(this, draw, R.string.open, R.string.close)
-        draw.addDrawerListener(toggle)
-        toggle.syncState()
+        // menambahkan isiDrawer ke dalam drawer
+        drawer.addDrawerListener(isiDrawer)
+
+        // synkronisasi bagian dalam atau action drawer
+        isiDrawer.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        sideMenu.setNavigationItemSelectedListener {
+        valueMenu.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.tv_nama ->
-                    Toast.makeText(this, "Anda menekan Nama", Toast.LENGTH_SHORT).show()
-                R.id.tv_kelas ->
-                    Toast.makeText(this, "Anda menekan Kelas", Toast.LENGTH_SHORT).show()
-
-                R.id.tv_nim ->
-                    Toast.makeText(this, "Anda menekan Nim", Toast.LENGTH_SHORT).show()
+                R.id.tv_nama -> Toast.makeText(this, "Anda menekan ${it.title}",Toast.LENGTH_SHORT).show()
             }
             true
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(toggle.onOptionsItemSelected(item)){
+        if(isiDrawer.onOptionsItemSelected(item)){
             return true
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
